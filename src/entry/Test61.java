@@ -43,9 +43,7 @@ public class Test61 {
         class Solution {
             public String solution(String letter) {
                 String answer = "";
-
                 String [] morse = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
-
                 Map<String, Character> morseMap = new HashMap<>();
 
                 for(char i='a'; i<='z'; i++){
@@ -54,7 +52,6 @@ public class Test61 {
                 }
 
                 String [] letters = letter.split(" ");
-
                 for(int i=0; i<letters.length; i++){
                     if(morseMap.containsKey(letters[i])){
                         answer += morseMap.get(letters[i]);
