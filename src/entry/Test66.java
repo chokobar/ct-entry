@@ -22,18 +22,28 @@ public class Test66 {
          */
         class Solution {
             public int solution(int[] array, int n) {
+                // 초기값 설정: 배열의 첫 번째 값을 정답 후보로 설정
                 int answer = array[0];
+                // n과 배열 첫 번째 값의 차이를 절댓값으로 계산하여 최소 차이(minDiff)로 설정
                 int minDiff = Math.abs(n - array[0]);
-
+                // 두 번째 요소부터 배열 끝까지 반복하며 가장 가까운 수를 찾음
                 for (int i = 1; i < array.length; i++) {
+                    // 현재 요소와 n의 차이를 절댓값으로 계산
                     int diff = Math.abs(n - array[i]);
+                    // 현재 차이가 기존의 최소 차이보다 작으면
                     if (diff < minDiff) {
+                        // 최소 차이를 갱신
                         minDiff = diff;
+                        // 현재 값을 정답 후보로 설정
                         answer = array[i];
-                    } else if (diff == minDiff && array[i] < answer) {
+                    }
+                    // 현재 차이가 최소 차이와 같지만, 값이 더 작다면
+                    else if (diff == minDiff && array[i] < answer) {
+                        // 더 작은 값을 정답 후보로 설정 (tie-breaker)
                         answer = array[i];
                     }
                 }
+                // 최종적으로 n과 가장 가까운 수를 반환
                 return answer;
             }
         }
