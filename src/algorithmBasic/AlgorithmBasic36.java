@@ -18,15 +18,15 @@ public class AlgorithmBasic36 {
          * 그 외	    할인 없음
          *
          */
-        Scanner num01 = new Scanner(System.in);
+        Scanner priceNumber = new Scanner(System.in);
 
         System.out.print("가격 입력: ");
-        int price = num01.nextInt();
+        int price = priceNumber.nextInt();
 
-        Scanner num02 = new Scanner(System.in);
+        Scanner gradeNumber = new Scanner(System.in);
 
         System.out.print("등급 입력: ");
-        int memberGrade = num02.nextInt();
+        int memberGrade = gradeNumber.nextInt();
 
         int totalPrice = 0;
         double discountRate = 0.0;
